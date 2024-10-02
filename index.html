@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./App.css">
+    <title>Todo</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+<body class="bg-blue-300">
+    <div class="flex items-center justify-center flex-col mt-[200px]">
+        <form class="todo-form w-[450px] p-[20px] rounded-[10px] bg-white">
+            <label class="flex flex-col">
+                <span class="mb-1 font-semibold text-[18px]">Enter todo</span>
+                <div class="flex justify-between">
+                    <input type="text"  placeholder="type todo" class="todo-input p-1.5 rounded-md border border-gray-500 w-[79%] outline-none">
+                    <button class="todo-button bg-blue-500 text-white p-1.5 rounded-md w-[20%] font-semibold">Add</button>
+                </div>
+            </label>
+        </form>
+        <div class="filter-buttons mt-2 flex space-x-2">
+          <button class="filter-btn bg-blue-400 text-white p-1.5 rounded-md" data-filter="all">All</button>
+          <button class="filter-btn bg-blue-400 text-white p-1.5 rounded-md" data-filter="completed">Completed</button>
+          <button class="filter-btn bg-blue-400 text-white p-1.5 rounded-md" data-filter="uncompleted">Uncompleted</button>
+        </div>
+        <ul class="todo-list rounded-md mt-2 w-[600px]">
+
+        </ul>
+    </div>
+</body>
+<script src="./main.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</html>
